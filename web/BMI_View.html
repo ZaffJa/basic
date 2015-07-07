@@ -25,11 +25,10 @@ and open the template in the editor.
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>                        
             </button>
-            <a class="navbar-brand" href="#">BASIC</a>
+            <a class="navbar-brand active" href="index.html"> <img src="resources/img/GG2.png"></a>
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="index.html">Home</a></li>
               <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Servlet <span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -53,30 +52,6 @@ and open the template in the editor.
               <div id="sidebar-wrapper">
                   <ul class="sidebar-nav">
                       <li class="sidebar-brand">
-                          <a href="#">
-                              TBD
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#">TBD</a>
-                      </li>
-                      <li>
-                          <a href="#">TBD</a>
-                      </li>
-                      <li>
-                          <a href="#">TBD</a>
-                      </li>
-                      <li>
-                          <a href="#">TBD</a>
-                      </li>
-                      <li>
-                          <a href="#">TBD</a>
-                      </li>
-                      <li>
-                          <a href="#">TBD</a>
-                      </li>
-                      <li>
-                          <a href="#">TBD</a>
                       </li>
                   </ul>
               </div>
@@ -90,10 +65,10 @@ and open the template in the editor.
                     <h1><br>BMI Calculator </h1>
                     <form action="./BMI" method="post">
                         <label>Weight</label>
-                        <input type="text" name="weightTextBox"><br>
+                        <input type="text" name="weightTextBox" pattern="[1-9.]{0,4}"> (kg)<br>
                         <br>
                         <label>Height</label>
-                        <input type="text" name="heightTextBox"><br>
+                        <input type="text" name="heightTextBox" pattern="[0-9.]{0,4}"> (m)<br>
                         <br>
                         <input type="submit" value="Calculate BMI" name="CalculateBMIButton" class="btn btn-success">
                     </form>    

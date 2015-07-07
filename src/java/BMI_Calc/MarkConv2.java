@@ -17,8 +17,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author User
  */
-@WebServlet(name = "BMI", urlPatterns = {"/BMI"})
-public class BMI extends HttpServlet {
+@WebServlet(name = "MarkConv2", urlPatterns = {"/MarkConv2"})
+public class MarkConv2 extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,28 +37,47 @@ public class BMI extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet BMI</title>");            
+            out.println("<title>Servlet MarkConv2</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet BMI at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet MarkConv2 at " + request.getContextPath() + "</h1>");
+            double mark = ((Double.parseDouble(request.getParameter("tfMidterm"))*0.3) +
+                            (Double.parseDouble(request.getParameter("tfFinal"))*0.3) +
+                            (Double.parseDouble(request.getParameter("tfProject"))*0.4));
             
-            double weight = Double.parseDouble(request.getParameter("weightTextBox"));
-            double height = Double.parseDouble(request.getParameter("heightTextBox"));
-            double BMI = weight/(height*height);
-            String wStatus = "";
-            if(BMI < 18.5){
-                wStatus = "Underweight.";
+            int point = 0;
+            String grade = "",status = "";
+            
+             if(mark>89 && mark<101){
+                grade = "A";
+                point = 4;
             }
-            else if(BMI >= 18.5 && BMI<25){
-                wStatus = "Normal";
+            else if(mark>79 && mark<90){
+                grade = "B";
+                point = 3;
             }
-            else if(BMI >= 25 && BMI<30){
-                wStatus = "Overweight";
+            else if(mark>69 && mark<80){
+                grade = "C";
+                point = 2;
             }
-            else if(BMI >= 30){
-                wStatus = "Obese";
+            else if(mark>59 && mark<70){
+                grade = "D";
+                point = 1;
             }
-            out.println("Your BMI is " + BMI + ". You are " + wStatus  );
+            else if(mark<59){
+                grade = "F";
+                point = 1;
+            }
+  
+            if(mark >= 60) status = "Pass!";
+            else if (mark < 60) status = "Fail!";
+            else if(mark < 0 || mark > 100) status = "Invalid input!!";
+
+            out.printf("Average : %.2f <br>", mark);
+            out.println("Grade : " + grade + "<br>");
+            out.println("Point : " + point + "<br>");
+            out.println("Result : " + status + "<br>");      
+                
             out.println("</body>");
             out.println("</html>");
         }

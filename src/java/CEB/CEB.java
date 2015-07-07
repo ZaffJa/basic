@@ -46,7 +46,7 @@ public class CEB extends HttpServlet {
             double vnd = Double.parseDouble(request.getParameter("vndTextBox"));
             
             if(request.getParameter("desCurrencyRadio") != null){
-                calc = vnd * Double.parseDouble(request.getParameter("desCurrencyRadio"));
+                calc = vnd / Double.parseDouble(request.getParameter("desCurrencyRadio"));
             }
             else {
                 out.println("Please check a currency.");

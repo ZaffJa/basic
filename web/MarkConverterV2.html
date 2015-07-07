@@ -8,16 +8,16 @@ and open the template in the editor.
     <head>
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="resources/css/bootstrap.css"/>
         <!-- Custom css -->
         <link href="resources/sidebar sources/css/simple-sidebar.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <script src="resources/js/validator/gen_validatorv4.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <nav class="navbar-inverse navbar-fixed-top">
+         <nav class="navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -52,6 +52,16 @@ and open the template in the editor.
               <div id="sidebar-wrapper">
                   <ul class="sidebar-nav">
                       <li class="sidebar-brand">
+                          <a href="#">
+                              TBD
+                          </a>
+                      </li>
+                      <li>
+                          <a href="MarkConverter.html">Mark Converter</a>
+                      </li>
+                      <li>
+                          <a href="MarkConverterV2.html">Grade Calculator</a>
+                      </li>
                   </ul>
               </div>
               <!-- /#sidebar-wrapper -->
@@ -61,41 +71,39 @@ and open the template in the editor.
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1><br>Currency Exchange </h1>
-            <div class="col-md-4">
-		<form action="./CEB" method="post" name="cebForm">
-                    <label>VND</label>
-                    <input type="text" name="vndTextBox" required autofocus ><br><br>
-			<input type="radio" name="desCurrencyRadio" value="16452">USD
-			<input type="radio" name="desCurrencyRadio" value="25170.38">EUR
-			<input type="radio" name="desCurrencyRadio" value="151.23">JPY
-                        <br><br>
-				
-			<input type="submit" name="exchangeButton" value="Exchange" class="btn btn-success">
-                </form>
-			</div>
-                   	
-			<div class="text-center">
-				<table class="table-bordered">
-                                    <thead><th colspan="2" class="text-center">Exchange Rates</th></thead>
-					<tr>
-						<td>Currency</td>
-						<td>Rate</td>
-					</tr>
-					<tr>
-						<td>USD</td>
-						<td>16,452</td>
-					</tr>
-					<tr>
-						<td>EUR</td>
-						<td>25,170.58</td>
-					</tr>
-					<tr>
-						<td>JPY</td>
-						<td>151.23</td>
-					</tr>
-				</table>
-                        </div>
+                        <h1 class="text-center"><br>GRADE CALCULATOR</h1>
+					<form action="./MarkConv2" method="post" name="gradeCalc">
+                                            <table align="center">
+                                                <tr>
+                                                    <td>
+                                                        Midterm :
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="tfMidterm" pattern="[0-9]{1,3}">(30%)
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        Final :
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="tfFinal" pattern="[0-9]{1,3}">(30%)
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        Project :
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" name="tfProject" pattern="[0-9]{1,3}">(40%)
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2"><input type="submit" name="Get_Result" value="Get Result" class="btn btn-default"></td>
+                                                </tr>
+                                            </table>
+					</form>
+                    </div>
                 </div>
             </div>
         </div>

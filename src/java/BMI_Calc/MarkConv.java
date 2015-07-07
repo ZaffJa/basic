@@ -69,12 +69,16 @@ public class MarkConv extends HttpServlet {
             
             if(mark >= 60) status = "Pass!";
             else if (mark < 60) status = "Fail!";
+            else if(mark < 0 || mark > 100) status = "Invalid input!!";
             
-            out.println("Average : " + mark + "<br>");
-            out.println("Grade : " + grade + "<br>");
-            out.println("Point : " + point + "<br>");
+            out.printf("Average : %.2f <br>", mark);
+                if(request.getParameter("gradCheckBox")!= null){
+                    out.println("Grade : " + grade + "<br>");
+                }
+                if(request.getParameter("pointCheckBox")!= null){
+                    out.println("Point : " + point + "<br>");
+                }
             out.println("Result : " + status + "<br>");
-            
             out.println("</body>");
             out.println("</html>");
         }
