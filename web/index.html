@@ -86,9 +86,8 @@ and open the template in the editor.
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1><br>Simple Sidebar</h1>
-                        <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
-                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+                        <h1><br>Main page</h1>
+                        <p>A blank space.The end</p>
                     </div>
                 </div>
             </div>
@@ -110,18 +109,6 @@ and open the template in the editor.
               e.preventDefault();
               $("#wrapper").toggleClass("toggled");
           });
-
-          var frmvalidator  = new Validator("surveyform");
-                  frmvalidator.EnableOnPageErrorDisplaySingleBox();
-                  frmvalidator.EnableMsgsTogether();
-
-                  frmvalidator.addValidation("tfName","req","Please enter your name");
-                  frmvalidator.addValidation("tfName","maxlen=65","Max length for name is 65");
-                  frmvalidator.addValidation("tfName","alpha_s","Name can contain alphabetic characters only");
-
-                  frmvalidator.addValidation("tfEmail","maxlen=50");
-                  frmvalidator.addValidation("tfEmail","req");
-                  frmvalidator.addValidation("tfEmail","email");
           </script>
     </body>
 </html>
