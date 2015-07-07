@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Basic Menu</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="resources/css/bootstrap.css"/>
+        <!-- Custom css -->
+        <link href="resources/sidebar sources/css/simple-sidebar.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <nav class="navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#">BASIC</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="index.html">Home</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Servlet <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="BMI_View.html">BMI</a></li>
+                  <li><a href="CEB.html">Currency Exchange</a></li>
+                  <li><a href="MarkConverter.html">Mark Converter</a></li>
+                  <li><a href="Tuition_Calc.html">Tuition Calculator</a></li>
+                </ul>
+              </li>
+              <li><a href="SurveryForm.html">Survey Form</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#menu-toggle" id="menu-toggle"><span class="glyphicon glyphicon-minus-sign"></span> Toggle</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+              <div id="wrapper">
+              <!-- Sidebar -->
+              <div id="sidebar-wrapper">
+                  <ul class="sidebar-nav">
+                      <li class="sidebar-brand">
+                          <a href="#">
+                              TBD
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#">TBD</a>
+                      </li>
+                      <li>
+                          <a href="#">TBD</a>
+                      </li>
+                      <li>
+                          <a href="#">TBD</a>
+                      </li>
+                      <li>
+                          <a href="#">TBD</a>
+                      </li>
+                      <li>
+                          <a href="#">TBD</a>
+                      </li>
+                      <li>
+                          <a href="#">TBD</a>
+                      </li>
+                      <li>
+                          <a href="#">TBD</a>
+                      </li>
+                  </ul>
+              </div>
+              <!-- /#sidebar-wrapper -->
+
+              <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1><br>Simple Sidebar</h1>
+                        <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
+                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+              <!-- /#page-content-wrapper -->
+
+          <!-- jQuery -->
+          <script src="resources/sidebar resources/js/jquery.js"></script>
+
+          <!-- Bootstrap Core JavaScript -->
+          <script src="js/bootstrap.min.js"></script>
+
+          <!-- Menu Toggle Script -->
+          <script>
+          $("#menu-toggle").click(function(e) {
+              e.preventDefault();
+              $("#wrapper").toggleClass("toggled");
+          });
+
+          var frmvalidator  = new Validator("surveyform");
+                  frmvalidator.EnableOnPageErrorDisplaySingleBox();
+                  frmvalidator.EnableMsgsTogether();
+
+                  frmvalidator.addValidation("tfName","req","Please enter your name");
+                  frmvalidator.addValidation("tfName","maxlen=65","Max length for name is 65");
+                  frmvalidator.addValidation("tfName","alpha_s","Name can contain alphabetic characters only");
+
+                  frmvalidator.addValidation("tfEmail","maxlen=50");
+                  frmvalidator.addValidation("tfEmail","req");
+                  frmvalidator.addValidation("tfEmail","email");
+          </script>
+    </body>
+</html>

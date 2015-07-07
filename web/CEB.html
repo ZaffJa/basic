@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="resources/css/bootstrap.css"/>
+        <!-- Custom css -->
+        <link href="resources/sidebar sources/css/simple-sidebar.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="resources/js/validator/gen_validatorv4.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <nav class="navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#">BASIC</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="index.html">Home</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Servlet <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="BMI_View.html">BMI</a></li>
+                  <li><a href="CEB.html">Currency Exchange</a></li>
+                  <li><a href="MarkConverter.html">Mark Converter</a></li>
+                  <li><a href="Tuition_Calc.html">Tuition Calculator</a></li>
+                </ul>
+              </li>
+              <li><a href="SurveryForm.html">Survey Form</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#menu-toggle" id="menu-toggle"><span class="glyphicon glyphicon-minus-sign"></span> Toggle</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+              <div id="wrapper">
+              <!-- Sidebar -->
+              <div id="sidebar-wrapper">
+                  <ul class="sidebar-nav">
+                      <li class="sidebar-brand">
+                          <a href="#">
+                              TBD
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#">TBD</a>
+                      </li>
+                      <li>
+                          <a href="#">TBD</a>
+                      </li>
+                      <li>
+                          <a href="#">TBD</a>
+                      </li>
+                      <li>
+                          <a href="#">TBD</a>
+                      </li>
+                      <li>
+                          <a href="#">TBD</a>
+                      </li>
+                      <li>
+                          <a href="#">TBD</a>
+                      </li>
+                      <li>
+                          <a href="#">TBD</a>
+                      </li>
+                  </ul>
+              </div>
+              <!-- /#sidebar-wrapper -->
+
+              <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1><br>Currency Exchange </h1>
+            <div class="col-md-4">
+		<form action="./CEB" method="post">
+                    <label>VND</label>
+			<input type="text" name="vndTextBox"><br>
+			<input type="radio" name="desCurrencyRadio" value="16452">USD
+			<input type="radio" name="desCurrencyRadio" value="25170.38">EUR
+			<input type="radio" name="desCurrencyRadio" value="151.23">JPY
+			<br>
+				
+			<input type="submit" name="exchangeButton" value="Exchange" class="btn btn-success">
+                </form>
+			</div>
+                   	
+			<div class="text-center">
+				<table class="table-bordered">
+                                    <thead><th>Exchange Rates</th></thead>
+					<tr>
+						<td>Currency</td>
+						<td>Rate</td>
+					</tr>
+					<tr>
+						<td>USD</td>
+						<td>16,452</td>
+					</tr>
+					<tr>
+						<td>EUR</td>
+						<td>25,170.58</td>
+					</tr>
+					<tr>
+						<td>JPY</td>
+						<td>151.23</td>
+					</tr>
+				</table>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+              <!-- /#page-content-wrapper -->
+
+          <!-- jQuery -->
+          <script src="resources/sidebar resources/js/jquery.js"></script>
+
+          <!-- Bootstrap Core JavaScript -->
+          <script src="js/bootstrap.min.js"></script>
+
+          <!-- Menu Toggle Script -->
+          <script>
+          $("#menu-toggle").click(function(e) {
+              e.preventDefault();
+              $("#wrapper").toggleClass("toggled");
+          });
+          </script>
+    </body>
+</html>

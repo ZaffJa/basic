@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>WARNARadio Survey</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="resources/css/bootstrap.css"/>
+        <!-- Custom css -->
+        <link href="resources/sidebar sources/css/simple-sidebar.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="resources/js/validator/gen_validatorv4.js"></script>
+    </head>
+    <body>
+        <nav class="navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#">BASIC</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="index.html">Home</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Servlet <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="BMI_View.html">BMI</a></li>
+                  <li><a href="CEB.html">Currency Exchange</a></li>
+                  <li><a href="MarkConverter.html">Mark Converter</a></li>
+                  <li><a href="Tuition_Calc.html">Tuition Calculator</a></li>
+                </ul>
+              </li>
+              <li><a href="SurveryForm.html">Survey Form</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#menu-toggle" id="menu-toggle"><span class="glyphicon glyphicon-minus-sign"></span> Toggle</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+              <div id="wrapper">
+              <!-- Sidebar -->
+              <div id="sidebar-wrapper">
+                  <ul class="sidebar-nav">
+                      <li class="sidebar-brand">
+                          <a href="#">
+                              TBD
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#">TBD</a>
+                      </li>
+                      <li>
+                          <a href="#">TBD</a>
+                      </li>
+                      <li>
+                          <a href="#">TBD</a>
+                      </li>
+                      <li>
+                          <a href="#">TBD</a>
+                      </li>
+                      <li>
+                          <a href="#">TBD</a>
+                      </li>
+                      <li>
+                          <a href="#">TBD</a>
+                      </li>
+                      <li>
+                          <a href="#">TBD</a>
+                      </li>
+                  </ul>
+              </div>
+              <!-- /#sidebar-wrapper -->
+
+              <!-- Page Content -->
+              <div id="page-content-wrapper">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-lg-12">                      
+                              <div class="center-block">
+                  <h1 class="text-center"> <br>WARNA SURIA FM </h1>
+                  <form action="./SurveyDisplay" method="post" name="surveyform">
+                      <table class="the-table table-striped" align="center">               
+                          <tr>
+                              <td class="text-right" >Name*</td>
+                              <td><input type="text" name="tfName"></td>
+                          </tr>
+                          <tr>
+                              <td class="text-right">E-mail*</td>
+                              <td><input type="text" name="tfEmail"></td>
+                          </tr>       
+                          <tr>
+                              <td class="text-right">Contact Number</td>
+                              <td><input type="text" name="tfContactNum"></td>
+                          </tr>
+                          <tr>
+                              <td class="text-right"> Musical Preferences </td>
+                              <td>
+                                  <input type="checkbox" name="musicalPref" value="Easy Listening"> Easy Listening<br>
+                                  <input type="checkbox" name="musicalPref" value="Rock N Roll"> Rock N Roll<br>
+                                  <input type="checkbox" name="musicalPref" value="Jazz"> Jazz<br>
+                                  <input type="checkbox" name="musicalPref" value="Classical"> Classical<br>
+                                  <input type="checkbox" name="musicalPref" value="Folk"> Folk<br>
+                                  <input type="checkbox" name="musicalPref" value="Heavy Metal"> Heavy Metal<br><br>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td class="text-right">Favourite Music Decade : </td>
+                              <td>
+                                  <select name="FavouriteMusic"> 
+                                      <option value="Fifties" > Fifties</option>
+                                      <option value="Sixties" > Sixties</option>
+                                      <option value="Seventies" > Seventies</option>
+                                      <option value="Eighties" > Eighties</option>
+                                      <option value="Nineties" > Nineties</option>
+                                      <option value="Tens" > Tens</option>
+                                  </select>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td class="text-right"> Days of Week </td>
+                              <td>
+                                  <input type="radio" name="Days" value="Monday"> Monday <br>
+                                  <input type="radio" name="Days" value="Tuesday"> Tuesday <br>
+                                  <input type="radio" name="Days" value="Wednesday"> Wednesday <br>
+                                  <input type="radio" name="Days" value="Thursday"> Thursday <br>
+                                  <input type="radio" name="Days" value="Friday"> Friday<br>
+                                  <input type="radio" name="Days" value="Saturday"> Saturday<br>
+                                  <input type="radio" name="Days" value="Sunday"> Sunday<br>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td class="text-right"> I listen to WARNARadio </td>
+                              <td>
+                                  <select name="ListenToWarnaRadio"> 
+                                      <option value="EveryDay" > Every Day</option>
+                                      <option value="One Day A Week" > One Day A Week</option>
+                                      <option value="2 Or 3 Days" > 2 Or 3 Days</option>
+                                      <option value="4Or5Days" > 4 Or 5 Days</option>
+                                  </select>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td class="text-right"> Prefer to Listen : </td>
+                              <td>
+                                  <input type="checkbox" name="ListenPref" value="At Home"> At Home?<br>
+                                  <input type="checkbox" name="ListenPref" value="In YourCar"> In Your Car?<br>
+                                  <input type="checkbox" name="ListenPref" value="At Work"> At Work?<br>
+                              </td>
+                          </tr>   
+                          <tr>
+                              <td class="text-right">  Additional Comment </td>
+                              <td>
+                                  <textarea name="AdditionlComment" cols="40" rows="5" placeholder="Add your comment here..."></textarea>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td align="right">
+                                  Subscribe to News Letter
+                              </td>
+                              <td>
+                                  <input type="checkbox"  name="subscriber" value="You have subscribed to the newsletter."> 
+                              </td>
+                          </tr>
+                          <tr>
+                              <td colspan="2" align="center"><input type="submit" name="Submit" value="Submit" class="btn-primary"></td> 
+                              <td></td>
+                          </tr>
+                          </table>
+                  </form>
+                  <br><br><br>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- /#page-content-wrapper -->
+
+          </div>
+          <!-- /#wrapper -->
+
+          <!-- jQuery -->
+          <script src="resources/sidebar resources/js/jquery.js"></script>
+
+          <!-- Bootstrap Core JavaScript -->
+          <script src="js/bootstrap.min.js"></script>
+
+          <!-- Menu Toggle Script -->
+          <script>
+          $("#menu-toggle").click(function(e) {
+              e.preventDefault();
+              $("#wrapper").toggleClass("toggled");
+          });
+
+          var frmvalidator  = new Validator("surveyform");
+                  frmvalidator.EnableOnPageErrorDisplaySingleBox();
+                  frmvalidator.EnableMsgsTogether();
+
+                  frmvalidator.addValidation("tfName","req","Please enter your name");
+                  frmvalidator.addValidation("tfName","maxlen=65","Max length for name is 65");
+                  frmvalidator.addValidation("tfName","alpha_s","Name can contain alphabetic characters only");
+
+                  frmvalidator.addValidation("tfEmail","maxlen=50");
+                  frmvalidator.addValidation("tfEmail","req");
+                  frmvalidator.addValidation("tfEmail","email");
+          </script>
+
+              </div>    
+    </body>
+</html>
